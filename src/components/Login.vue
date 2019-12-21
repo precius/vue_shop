@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       // 这是登录表单的数据绑定对象
       loginForm: {
@@ -50,7 +50,7 @@ export default {
     }
   },
   methods: {
-    resetLoginForm () {
+    resetLoginForm() {
       // console.log(this)
       this.$refs.loginFormRef.resetFields()
     },
