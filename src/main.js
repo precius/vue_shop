@@ -20,6 +20,8 @@ axios.interceptors.request.use(config => {
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })
+// 其它的组件中，是无法使用 axios 命令的。但如果给Vue函数添加一个原型属性$http 指向axios
+// 将 axios 改写为 Vue 的原型属性 直接用this.$http就能执行axios 方法了
 Vue.prototype.$http = axios
 
 Vue.component('Bread', Bread)
