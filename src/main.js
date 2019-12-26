@@ -9,6 +9,8 @@ import './assets/fonts/iconfont.css'
 import './assets/css/global.css'
 // 导入面包屑导航
 import Bread from './components/bread.vue'
+// 导入树形表格插件
+import TreeTable from 'vue-table-with-tree-grid'
 
 import axios from 'axios'
 // 配置请求的根路径
@@ -25,6 +27,8 @@ axios.interceptors.request.use(config => {
 Vue.prototype.$http = axios
 
 Vue.component('Bread', Bread)
+
+Vue.component('tree-table', TreeTable)
 
 Vue.config.productionTip = false
 
