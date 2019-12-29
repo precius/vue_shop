@@ -11,7 +11,7 @@
         </el-col>
       </el-row>
       <!-- 角色列表区域 -->
-      <el-table :data="roleslist" border stripe>
+      <el-table :data="roleslist" border stripe row-key="id" :tree-props="{ children: null, hashChildren: null }">
         <!-- 展开列 -->
         <el-table-column type="expand">
           <template slot-scope="scope">
